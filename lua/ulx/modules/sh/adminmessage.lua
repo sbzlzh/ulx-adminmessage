@@ -1,4 +1,4 @@
-local CATEGORY_NAME = "Administrator Channel"
+local CATEGORY_NAME = "Administrator Message"
 
 -- Initialize default positions and time
 local DEFAULT_POS_X = 5 / 10
@@ -105,7 +105,7 @@ function ulx.adminmessage(calling_ply, msg)
 end
 
 local adminmessage = ulx.command(CATEGORY_NAME, "ulx adminmessage", ulx.adminmessage, "@", true, true)
-adminmessage:addParam { type = ULib.cmds.StringArg, hint = "messages", ULib.cmds.takeRestOfLine }
+adminmessage:addParam { type = ULib.cmds.StringArg, hint = "message", ULib.cmds.takeRestOfLine }
 adminmessage:defaultAccess(ULib.ACCESS_ADMIN)
 adminmessage:help("Send messages to all players in the center of the screen and in the chat box.")
 
